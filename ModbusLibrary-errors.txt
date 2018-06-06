@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+
+<nifamily familyname="Modbus Library" displayname="Modbus Library">
+</nifamily>
+</nicomment>
+<nierror code="538170">
+The returned function code does not match the requested data.
+</nierror>
+<nierror code="538171">
+The MEI type was not returned as 0x0E (14). This is required for the device identification function.
+</nierror>
+<nierror code="538172">
+The data returned did not match the data sent for that function.
+</nierror>
+<nierror code="538173">
+That object could not be found in the device.
+</nierror>
+</nierror>
+<nierror code="538174">
+An object could not be stored to the device. Its length is too long to transmit.
+</nierror>
+<nierror code="538175">
+The slave daemon failed to launch.
+</nierror>
+<nierror code="538176">
+The current Modbus Slave does not have a TCP daemon.
+</nierror>
+<nierror code="538177">
+This serial request was configured as a broadcast and should have no response.
+</nierror>
+</nierror>
+<nierror code="538178">
+This modbus master does not use a serial protocol and cannot perform that action.
+</nierror>
+<nierror code="538179">
+The object used has been invalidated. A method was called on an interface class.
+</nierror>
+<nierror code="538181">
+Modbus Error: Illegal Function. This function is not implemented on the server.
+</nierror>
+<nierror code="538182">
+Modbus Error: Illegal Data Address. The specified data address is not an allowable address for the server.
+</nierror>
+<nierror code="538183">
+Modbus Error: Illegal Data Value. The specified data value is not an allowable value for the server.
+</nierror>
+<nierror code="538184">
+Modbus Error: Server Device Failure.
+</nierror>
+<nierror code="538185">
+Modbus Exception: Acknowledge. The server is processing the request but may take a long time in doing so. The client should send a Poll Program Complete message to determine if processing is completed.
+</nierror>
+<nierror code="538186">
+Modbus Exception: Server Device Busy. The client should retransmit at a later time.
+</nierror>
+<nierror code="538188">
+Modbus Error: Memory Parity Error. An extended file area failed to pass a consistency check. The client may retry, but service may be required on the server.
+</nierror>
+<nierror code="538191">
+Modbus Exception: Gateway Path Unavailable. The gateway may be misconfigured or overloaded.
+</nierror>
+<nierror code="538192">
+Modbus Exception: Gateway Target Device Failed to Respond. This usually means that the target device is not present on the network.
+</nierror>
+</nidocument>

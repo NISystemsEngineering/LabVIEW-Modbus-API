@@ -1,0 +1,8 @@
+<vi>
+<name>Get Daemon Error.vi</name>
+<desc><para>This VI is an accessor for the <strong>daemon error</strong> stored in the Modbus slave instance. This accessor can be used as a property node. This status indicates the error state of the Modbus daemon.</para>
+</desc>
+<helptopic>Get_Daemon_Error.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

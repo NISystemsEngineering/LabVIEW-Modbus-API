@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+        <xs:minLength value="1" />
+        </xs:restriction>
+     </xs:simpleType>
+    
+     <xs:simpleType name="path">
+        <xs:annotation>
+            <xs:documentation>Paths cannot contain :,*,?,&lt;,&gt;,&quot;,|</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="nonEmptyString">
+            <xs:pattern value="[^:|^*|^?|^&lt;|^&gt;|^&quot;|^\|]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="viPath">
+        <xs:annotation>
+            <xs:documentation>VI paths need a .vi extension.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="path">
+            <xs:pattern value=".*\.vi"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="filename">
+        <xs:annotation>
+            <xs:documentation>Filenames cannot contain \ or /.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="path">
+            <xs:pattern value="[^\\|^/]*" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="viFilename">
+        <xs:annotation>
+            <xs:documentation>VI filenames need a .vi extension. Filenames cannot contain \ or /.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="viPath">
+            <xs:pattern value="[^\\|^/]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="imagePath">
+        <xs:annotation>
+            <xs:documentation>Images need a .gif, .jpg, .bmp, or .png extension.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="path">
+            <xs:pattern value=".*\.(gif|jpg|bmp|png)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="imageFilename">
+        <xs:annotation>
+            <xs:documentation>Images need a .gif, .jpg, .bmp, or .png extension. Filenames cannot contain \ or /.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="imagePath">
+            <xs:pattern value="[^\\|^/]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+       
+</xs:schema>

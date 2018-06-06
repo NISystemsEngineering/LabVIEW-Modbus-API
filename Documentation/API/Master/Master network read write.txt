@@ -1,0 +1,8 @@
+<vi>
+<name>Master network read write.vi</name>
+<desc><para>This VI allows a mutex for the master API without restricting any other functions. This mutex is currently unimplemented.</para>
+</desc>
+<helptopic>Master_network_read_write.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

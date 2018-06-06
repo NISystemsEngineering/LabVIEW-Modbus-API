@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Master network read write.vi" VILibrary="Modbus Master.lvclass">
+<name>Master network read write.vi</name><shortDescription><para>This VI allows a mutex for the master API without restricting any other functions. This mutex is currently unimplemented.</para></shortDescription><parameters>
+<refParameter id="error_in_1134"/><refParameter id="network_master_in_329"/><refParameter id="transmission_data_unit_in_331"/><refParameter id="Modbus_data_unit_in_333"/><refParameter id="Modbus_master_in_297"/><refParameter id="error_out_1180"/><refParameter id="Modbus_data_unit_out_349"/><refParameter id="Modbus_master_out_305"/></parameters>
+</vi>

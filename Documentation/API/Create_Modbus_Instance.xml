@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="polyVI_to_HTML.xsl"?><polyvi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="polyVI.xsd" name="Create Modbus Instance.vi"  VILibrary="API Main.lvlib">
+<name>Create Modbus Instance.vi</name><shortDescription><para>Creates a new modbus instance of the specified type.</para></shortDescription><instances><refVI fileName="API_Main.lvlib:Create_Serial_Master.xml"/>	<refVI fileName="API_Main.lvlib:Create_Serial_Slave.xml"/>	<refVI fileName="API_Main.lvlib:Create_TCP_Slave.xml"/>	<refVI fileName="API_Main.lvlib:Create_TCP_Master.xml"/>
+</instances></polyvi>

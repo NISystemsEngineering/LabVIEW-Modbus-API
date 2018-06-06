@@ -1,0 +1,8 @@
+<vi>
+<name>Write Exception Status.vi</name>
+<desc><para>Sets the exception status stored in the device model.</para>
+</desc>
+<helptopic>Write_Exception_Status.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

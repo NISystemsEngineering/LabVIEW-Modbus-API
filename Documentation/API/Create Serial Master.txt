@@ -1,0 +1,8 @@
+<vi>
+<name>Create Serial Master.vi</name>
+<desc><para>Creates a standard serial master. The transmission data unit used by the device is defined by the <strong>serial type</strong> input.</para>
+</desc>
+<helptopic>Create_Serial_Master.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

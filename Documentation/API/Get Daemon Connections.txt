@@ -1,0 +1,8 @@
+<vi>
+<name>Get Daemon Connections.vi</name>
+<desc><para>This VI is an accessor for the list of <strong>connections</strong> established to the Modbus slave instance. This accessor can be used as a property node. </para>
+</desc>
+<helptopic>Get_Daemon_Connections.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

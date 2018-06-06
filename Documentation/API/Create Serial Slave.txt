@@ -1,0 +1,8 @@
+<vi>
+<name>Create Serial Slave.vi</name>
+<desc><para>Creates a standard TCP slave with an IP ADU. If the data model input is unwired, a standard data model will be initialized and used. If the input is wired, the code will check to make sure that it is not the default value for the class (it should be initialized). If the default value of the class is wired, the standard model will be initialized and used.</para>
+</desc>
+<helptopic>Create_Serial_Slave.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

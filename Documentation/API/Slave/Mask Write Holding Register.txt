@@ -1,0 +1,9 @@
+<vi>
+<name>Mask Write Holding Register.vi</name>
+<desc><para>Writes the masked value of a single register using an <strong>AND mask</strong> and an <strong>OR mask</strong> using the equation below:
+Result=(Current Value AND AndMask) OR (OrMask AND !AndMask)</para>
+</desc>
+<helptopic>Mask_Write_Holding_Register.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

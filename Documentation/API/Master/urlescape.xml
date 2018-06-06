@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<searchReplaceSets>
+   <searchReplaceSet find="%" replace="%25" />
+   <searchReplaceSet find="&amp;" replace="%26" />
+   <searchReplaceSet find="&gt;" replace="%3E" />
+   <searchReplaceSet find=" " replace="%20" />
+   <searchReplaceSet find="(" replace="%28" />
+   <searchReplaceSet find=")" replace="%29" />
+   <searchReplaceSet find="+" replace="%2B" />
+   <searchReplaceSet find="," replace="%2C" />
+   <searchReplaceSet find="[" replace="%5B" />
+   <searchReplaceSet find="]" replace="%5D" />
+   <searchReplaceSet find="{" replace="%7B" />
+   <searchReplaceSet find="}" replace="%7D" />
+   <searchReplaceSet find="=" replace="%3D" />
+   <searchReplaceSet find="?" replace="%3F" />
+   <searchReplaceSet find="#" replace="%23" />
+   <searchReplaceSet find="^" replace="%5E" />
+   <searchReplaceSet find=":" replace="%3A" />
+</searchReplaceSets>

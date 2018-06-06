@@ -1,0 +1,8 @@
+<vi>
+<name>Read Exception Status.vi</name>
+<desc><para>Interface to reads any exception status set in the device. The exeption status is a set of 8 status bits, packed as a U8 integer. With third-party devices, this function should only be used if the device is a serial device, as the Modbus specification defines this as a serial-only function. However, this library includes support for this function regardless of the transport mechanism.</para>
+</desc>
+<helptopic>Read_Exception_Status.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

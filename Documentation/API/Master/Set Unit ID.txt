@@ -1,0 +1,8 @@
+<vi>
+<name>Set Unit ID.vi</name>
+<desc><para>Provides a simple function for defining the <strong>unit ID</strong> which is the target of Modbus master read and write operations. This function takes effect immediately, and will change the target of any future operations using the instance returned by <strong>Modbus master out</strong>. Multiple units can be accessed simultaneously by forking the wire. This function only applies when using the RTU or ASCII serial transmission data unit. The TCP/IP transmission data unit ignores the unit ID.</para>
+</desc>
+<helptopic>Set_Unit_ID.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

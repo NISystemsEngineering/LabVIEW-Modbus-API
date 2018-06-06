@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="minimal.css"><script type="text/javascript">var nofeedbacklink = true;</script><script src="common.js" type="text/javascript"></script><script src="cssframes.js" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>Create Serial Master VI</title>
+<link media="print" rel="stylesheet" type="text/css" href="print.css">
+</head>
+<body>
+<noscript>
+<p class="Body">JavaScript is disabled. <a href="lvhelp.chm::/JavaScript_Disabled.html">Details</a></p>
+<hr width="100%">
+</noscript>
+<div id="styleDivTitle">
+<h1>Create Serial Master VI</h1><strong>Installed With:</strong> LabVIEW<p>Creates a standard serial master. The transmission data unit used by the device is defined by the <strong>serial type</strong> input.</p>
+<p class="Anchor"><img src="Create_Serial_Master.gif" alt="Create Serial Master"></p>
+</div>
+<div id="styleDivScrolling">
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cu32.gif" alt="datatype_images\cu32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>baud rate</strong> is the rate of transmission. The default is 9600.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cio.gif" alt="datatype_images\cio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>VISA resource name</strong> specifies the resource to be opened. The VISA resource name control also specifies the session and class. </p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu8.gif" alt="datatype_images\cu8.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>unit ID</strong> defines the device targeted by all Modbus master read and write operations.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu16.gif" alt="datatype_images\cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>parity</strong> specifies the parity used for every frame to be transmitted or received. The default is even.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu16.gif" alt="datatype_images\cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>flow control</strong> sets the type of control used by the transfer mechanism. </p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cenum.gif" alt="datatype_images\cenum.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>serial type</strong> defines the type of serial transmission data unit to be used. RTU is a binary, higher performance data unit. ASCII uses human-readable characters to send all data.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\icclst.gif" alt="datatype_images\icclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error out</strong> contains error information. This output provides standard error out functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\ibool.gif" alt="datatype_images\ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>status</strong> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.
+
+Right-click the <strong>error out</strong> indicator on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ii32.gif" alt="datatype_images\ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>code</strong> is the error or warning code.
+
+Right-click the <strong>error out</strong> indicator on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\istr.gif" alt="datatype_images\istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>source</strong> string describes the origin of the error or warning.
+
+Right-click the <strong>error out</strong> indicator on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ccclst.gif" alt="datatype_images\ccclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error in</strong> describes error conditions that occur before this node runs. This input provides standard error in functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cbool.gif" alt="datatype_images\cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>status</strong> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.
+
+Right-click the <strong>error in</strong> control on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ci32.gif" alt="datatype_images\ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>code</strong> is the error or warning code.
+
+Right-click the <strong>error in</strong> control on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cstr.gif" alt="datatype_images\cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>source</strong> describes the origin of the error or warning.
+
+Right-click the <strong>error in</strong> control on the front panel and select <strong>Explain Error</strong> or <strong>Explain Warning</strong> from the shortcut menu for more information about the error.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\irn.gif" alt="datatype_images\irn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>serial master instance</strong> returns a configured and initialized serial master.</p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="minimal.css"><script type="text/javascript">var nofeedbacklink = true;</script><script src="common.js" type="text/javascript"></script><script src="cssframes.js" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>Write and Read Multiple Registers VI</title>
+<link media="print" rel="stylesheet" type="text/css" href="print.css">
+</head>
+<body>
+<noscript>
+<p class="Body">JavaScript is disabled. <a href="lvhelp.chm::/JavaScript_Disabled.html">Details</a></p>
+<hr width="100%">
+</noscript>
+<div id="styleDivTitle">
+<h1>Write and Read Multiple Registers VI</h1><strong>Installed With:</strong> LabVIEW<p>Writes and reads the values of multiple register values in series. The <strong>write values</strong> are inserted starting at <strong>write starting address</strong> and the returned <strong>read values</strong> consists of <strong>read count</strong> holding registers starting at <strong>read starting address</strong>.</p>
+<p class="Anchor"><img src="Write_and_Read_Multiple_Registers.gif" alt="Write and Read Multiple Registers"></p>
+</div>
+<div id="styleDivScrolling">
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\crn.gif" alt="datatype_images\crn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus instance</strong> can accept any Modbus instance, master or slave.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu16.gif" alt="datatype_images\cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>read starting address</strong> sets the starting address of the read action for this function</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu16.gif" alt="datatype_images\cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>read count</strong> defines the number of holding registers to read</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu16.gif" alt="datatype_images\cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>write starting address</strong> defines the start address of the write command</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\c1du16.gif" alt="datatype_images\c1du16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>write values</strong> defines the data to be written to the device, starting at <strong>write starting address</strong></p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\icclst.gif" alt="datatype_images\icclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error out</strong> contains error information. This output provides standard error out functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\ibool.gif" alt="datatype_images\ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ii32.gif" alt="datatype_images\ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\istr.gif" alt="datatype_images\istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ccclst.gif" alt="datatype_images\ccclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error in</strong> describes error conditions that occur before this node runs. This input provides standard error in functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cbool.gif" alt="datatype_images\cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ci32.gif" alt="datatype_images\ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cstr.gif" alt="datatype_images\cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\irn.gif" alt="datatype_images\irn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus instance</strong> returns the Modbus instance provided as input.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\i1du16.gif" alt="datatype_images\i1du16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>read values</strong> consists of <strong>read count</strong> holding registers from the device starting at <strong>read starting address</strong></p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

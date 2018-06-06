@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<searchReplaceSets>
+   <searchReplaceSet find="&quot;" replace="" />
+   <searchReplaceSet find="/" replace="" />
+   <searchReplaceSet find="?" replace="" />
+   <searchReplaceSet find="|" replace="" />
+   <searchReplaceSet find="&lt;" replace="" />
+   <searchReplaceSet find="&gt;" replace="" />
+   <searchReplaceSet find="*" replace="" />
+</searchReplaceSets>

@@ -1,0 +1,8 @@
+<vi>
+<name>Write Multiple Registers.vi</name>
+<desc><para>Writes <strong>registers to write</strong> starting at <strong>starting address</strong> to the device holding registers.</para>
+</desc>
+<helptopic>Write_Multiple_Registers.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

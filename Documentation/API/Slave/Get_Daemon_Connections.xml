@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Get Daemon Connections.vi" VILibrary="Modbus Slave.lvclass">
+<name>Get Daemon Connections.vi</name><shortDescription><para>This VI is an accessor for the list of <format type="bold">connections</format> established to the Modbus slave instance. This accessor can be used as a property node. </para></shortDescription><parameters>
+<refParameter id="error_in_(no_error)_24"/><refParameter id="Modbus_Slave_out_34"/><refParameter id="Modbus_slave_in_130"/><refParameter id="connections_44"/><refParameter id="error_out_120"/></parameters>
+</vi>

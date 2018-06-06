@@ -1,0 +1,8 @@
+<vi>
+<name>Write Single Coil.vi</name>
+<desc><para>Writes <strong>coil to write</strong> to <strong>address</strong> of the device.</para>
+</desc>
+<helptopic>Write_Single_Coil.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

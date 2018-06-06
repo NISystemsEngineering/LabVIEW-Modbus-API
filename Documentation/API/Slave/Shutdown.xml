@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Shutdown.vi" VILibrary="Modbus Slave.lvclass">
+<name>Shutdown.vi</name><shortDescription><para>Performs any actions needed to shutdown and clean up the Modbus instance provided. For a slave instance, this will force a shutdown of the slave daemon and close all connections to the physical bus.</para></shortDescription><parameters>
+<refParameter id="Modbus_slave_in_130"/><refParameter id="error_out_120"/><refParameter id="error_in_106"/></parameters>
+</vi>

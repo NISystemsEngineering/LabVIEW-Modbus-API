@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Write Multiple Coils.vi" VILibrary="Modbus Slave.lvclass">
+<name>Write Multiple Coils.vi</name><shortDescription><para>Writes <format type="bold">coils to write</format> starting at <format type="bold">starting address</format> to the device coils.</para></shortDescription><parameters>
+<refParameter id="Modbus_slave_in_1016"/><refParameter id="starting_address_1018"/><refParameter id="coils_to_write_1020"/><refParameter id="error_out_1006"/><refParameter id="error_in_1014"/><refParameter id="Modbus_slave_out_1008"/></parameters>
+</vi>

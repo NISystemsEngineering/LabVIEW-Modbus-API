@@ -1,0 +1,8 @@
+<vi>
+<name>Get Daemon Status.vi</name>
+<desc><para>This VI is an accessor for the <strong>daemon status</strong> stored in the Modbus slave instance. This accessor can be used as a property node. This status indicates the state of the Modbus daemon.</para>
+</desc>
+<helptopic>Get_Daemon_Status.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

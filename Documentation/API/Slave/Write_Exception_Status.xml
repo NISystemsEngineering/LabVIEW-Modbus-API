@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Write Exception Status.vi" VILibrary="Modbus Slave.lvclass">
+<name>Write Exception Status.vi</name><shortDescription><para>Sets the exception status stored in the device model.</para></shortDescription><parameters>
+<refParameter id="Modbus_slave_in_130"/><refParameter id="exception_status_324"/><refParameter id="error_out_120"/><refParameter id="error_in_106"/><refParameter id="Modbus_slave_out_100"/></parameters>
+</vi>

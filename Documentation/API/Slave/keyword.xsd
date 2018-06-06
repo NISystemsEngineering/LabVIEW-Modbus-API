@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Jonathan McCreless Roe (National Instruments) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="keyword">
+		<xs:annotation>
+			<xs:documentation>Collection of entries and subentries you want to appear in an index. 1) You cannot have more than one entry or sub entry per keyword. 
+2) Use the embed (embed="Yes") attribute if you are embedding your keyword in a paragraph, list item, note, caution, warning, tip, or table cell.
+3) Please avoid putting keywords in headings.
+4) Please ensure each keyword you embed is either at the beginning or the end of the paragraph, li, etc.. This is to helps localization.
+5) Each keyword must be in this structure:
+  [keyword][entry]term[/entry][sub_entry]sub-entry term[/sub_entry][/keyword]
+</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entry" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>A keyword entry.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sub_entry" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>A sub keyword entry for use in an index.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="embed" type="xs:string"/>
+			<xs:attribute name="type" type="xs:string"/>
+			<xs:attribute name="text" type="xs:string"/>
+			<xs:attribute name="bookmark" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

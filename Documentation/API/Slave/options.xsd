@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="baseDatatypes.xsd"/>
+	<xs:element name="options">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="products" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="disableInstalledWith" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="addJavaScript" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="showFeedbackLink" minOccurs="0"/>
+				<xs:element ref="JSVar" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="showPlaceFind" minOccurs="0"/>
+				<xs:element ref="datatypesSubDir" minOccurs="0"/>
+				<xs:element ref="connPanesSubDir" minOccurs="0"/>
+				<xs:element ref="requireThisParameterTag" minOccurs="0"/>
+				<xs:element ref="convertLigatures" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="JSPath">
+		<xs:annotation>
+			<xs:documentation>Files need a .js extension.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="path">
+			<xs:pattern value=".*\.[Jj][Ss]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="products">
+		<xs:annotation>
+			<xs:documentation>Defines the products available for the Installed With: line in HTML topics.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="product" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="product">
+		<xs:annotation>
+			<xs:documentation>Defines each individual product available for the Installed With: line in HTML topics</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:attribute name="id" use="required"/>
+			<xs:attribute name="default" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="disableInstalledWith">
+		<xs:annotation>
+			<xs:documentation>Prevents the Installed With: line from appearing at the top of all HTML topics.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="addJavaScript">
+		<xs:annotation>
+			<xs:documentation>Use the &lt;addJavascript&gt; tag to add a reference to an additional external .js file to HTML topics.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="path" type="JSPath" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="showFeedbackLink">
+		<xs:annotation>
+			<xs:documentation>Specifies appearance of feedback link at the bottom of all HTML topics.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="JSVar">
+		<xs:annotation>
+			<xs:documentation>Use the &lt;JSVar&gt; tag to add a javascript variable declaration to HTML output.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="nonEmptyString">
+					<xs:attribute name="name" type="nonEmptyString" use="required">
+						<xs:annotation>
+							<xs:documentation>Specifies the name of the variable.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="type" use="required">
+						<xs:annotation>
+							<xs:documentation>Specifies the type of the variable, either string or number.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="nonEmptyString">
+								<xs:enumeration value="string">
+									<xs:annotation>
+										<xs:documentation>Variable is a string. XSL puts the value of the variable inside quotes in HTML output.</xs:documentation>
+									</xs:annotation>
+								</xs:enumeration>
+								<xs:enumeration value="number">
+									<xs:annotation>
+										<xs:documentation>Variable is a number.</xs:documentation>
+									</xs:annotation>
+								</xs:enumeration>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="emptyTag"/>
+	<xs:element name="showPlaceFind" type="emptyTag">
+		<xs:annotation>
+			<xs:documentation>Include the &lt;showPlaceFind&gt; tag if you want to automatically include place/find buttons in VI and poly VI topics without needing to use the &lt;buttons&gt; tag.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="hidePlaceFind" type="emptyTag">
+		<xs:annotation>
+			<xs:documentation>Include the &lt;hidePlaceFind&gt; tag to override the &lt;showPlaceFind&gt; tag for a single VI or poly VI.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="convertLigatures" type="emptyTag">
+		<xs:annotation>
+			<xs:documentation>Specifies to convert ligatures to separate characters when transforming XML. Include this tag if your developers use an old version of the VI localization tools that also converts ligatures.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="hideConnPane" type="emptyTag">
+		<xs:annotation>
+			<xs:documentation>Specifies to omit the connector pane image from the HTML output for this VI.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="requireThisParameterTag" type="emptyTag">
+		<xs:annotation>
+			<xs:documentation>Enables error handling if the first paragraph of a parameter short description does not include at least one &lt;thisParameter&gt; tag. Regardless of whether you use this option tag, at least one &lt;thisParameter&gt; tag should be included in all parameter descriptions to ensure that the parameter name appears in documentation. Add this tag to options.xml before you release your product to ensure you find all parameters missing a &lt;thisParameter&gt; tag.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="subDirTag">
+		<xs:attribute name="path" type="path" use="required">
+			<xs:annotation>
+				<xs:documentation>The subdirectory, relative to your generated HTML topics.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="datatypesSubDir" type="subDirTag">
+		<xs:annotation>
+			<xs:documentation>Specifies a subdirectory, relative to your generated HTML topics, for datatype gifs.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="connPanesSubDir" type="subDirTag">
+		<xs:annotation>
+			<xs:documentation>Specifies a subdirectory, relative to your generated HTML topics, for connector pane gifs..</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Mask Write Holding Register.vi" VILibrary="Modbus Slave.lvclass">
+<name>Mask Write Holding Register.vi</name><shortDescription><para>Writes the masked value of a single register using an <format type="bold">AND mask</format> and an <format type="bold">OR mask</format> using the equation below:
+Result=(Current Value AND AndMask) OR (OrMask AND !AndMask)</para></shortDescription><parameters>
+<refParameter id="Modbus_instance_in_115"/><refParameter id="address_1098"/><refParameter id="AND_Mask_28"/><refParameter id="OR_Mask_30"/><refParameter id="error_out_1006"/><refParameter id="error_in_1014"/><refParameter id="Modbus_instance_out_105"/></parameters>
+</vi>

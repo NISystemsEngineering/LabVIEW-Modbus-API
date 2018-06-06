@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Create Serial Master.vi" VILibrary="API Main.lvlib">
+<name>Create Serial Master.vi</name><shortDescription><para>Creates a standard serial master. The transmission data unit used by the device is defined by the <format type="bold">serial type</format> input.</para></shortDescription><parameters>
+<refParameter id="baud_rate_1136"/><refParameter id="VISA_resource_name_1138"/><refParameter id="unit_ID_1140"/><refParameter id="parity_(even)_1142"/><refParameter id="flow_control_(none)_1144"/><refParameter id="serial_type_1146"/><refParameter id="error_out_1152"/><refParameter id="error_in_1134"/><refParameter id="serial_master_instance_1154"/></parameters>
+</vi>

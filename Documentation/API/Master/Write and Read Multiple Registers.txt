@@ -1,0 +1,8 @@
+<vi>
+<name>Write and Read Multiple Registers.vi</name>
+<desc><para>Writes and reads the values of multiple register values in series. The <strong>write values</strong> are inserted starting at <strong>write starting address</strong> and the returned <strong>read values</strong> consists of <strong>read count</strong> holding registers starting at <strong>read starting address</strong>.</para>
+</desc>
+<helptopic>Write_and_Read_Multiple_Registers.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

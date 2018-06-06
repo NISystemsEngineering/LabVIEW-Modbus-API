@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Read Discrete Inputs.vi" VILibrary="Modbus Slave.lvclass">
+<name>Read Discrete Inputs.vi</name><shortDescription><para>Reads <format type="bold">number of inputs</format> discrete inputs starting at <format type="bold">starting address</format> from the device.</para></shortDescription><parameters>
+<refParameter id="Modbus_slave_in_1016"/><refParameter id="starting_address_1018"/><refParameter id="number_of_inputs_137"/><refParameter id="error_out_1006"/><refParameter id="error_in_1014"/><refParameter id="Modbus_slave_out_1008"/><refParameter id="discrete_inputs_107"/></parameters>
+</vi>

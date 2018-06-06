@@ -1,0 +1,8 @@
+<vi>
+<name>Write Device Identification.vi</name>
+<desc><para>Writes Modbus object information stored on the device. This can include basic information, like manufacturer, additional standard items, or model-specific extended items. This function may take a large amount of time to execute, as it requires the transfer of a large quantity of binary data. Even on TCP/IP, this function is limited by the maximum defined size of a Modbus protocol data unit. If a slave supports objects, it is required that it stores information for VendorName (0x00), ProductCode (0x01), and MajorMinorRevision (0x02). The standard device data model provided by this library accepts any object request and can store any objects.</para>
+</desc>
+<helptopic>Write_Device_Identification.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

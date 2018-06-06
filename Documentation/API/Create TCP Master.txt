@@ -1,0 +1,8 @@
+<vi>
+<name>Create TCP Master.vi</name>
+<desc><para>Creates a standard TCP master using an IP transmission data unit. This instance looks for a slave at the <strong>address</strong> and <strong>port</strong> specified.</para>
+</desc>
+<helptopic>Create_TCP_Master.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

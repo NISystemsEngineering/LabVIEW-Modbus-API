@@ -1,0 +1,8 @@
+<vi>
+<name>Initialize.vi</name>
+<desc><para>Initializes a Modbus master instance. If using the <strong>Create Modbus Instance</strong> VI, this is not necessary. This function will initiate any required bus communication.</para>
+</desc>
+<helptopic>Initialize.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

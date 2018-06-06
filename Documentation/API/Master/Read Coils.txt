@@ -1,0 +1,8 @@
+<vi>
+<name>Read Coils.vi</name>
+<desc><para>Reads <strong>number of inputs</strong> coils starting at <strong>starting address</strong> from the device.</para>
+</desc>
+<helptopic>Read_Coils.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

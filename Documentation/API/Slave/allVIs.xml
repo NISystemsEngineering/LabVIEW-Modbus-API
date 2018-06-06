@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<allvis>
+   <vi filename="Get_Daemon_Connections.xml" />
+   <vi filename="Get_Daemon_Connection_Count.xml" />
+   <vi filename="Get_Daemon_Error.xml" />
+   <vi filename="Get_Daemon_Status.xml" />
+   <vi filename="Initialize.xml" />
+   <vi filename="Mask_Write_Holding_Register.xml" />
+   <vi filename="Read_Coils.xml" />
+   <vi filename="Read_Device_Identification.xml" />
+   <vi filename="Read_Discrete_Inputs.xml" />
+   <vi filename="Read_Exception_Status.xml" />
+   <vi filename="Read_Holding_Registers.xml" />
+   <vi filename="Read_Input_Registers.xml" />
+   <vi filename="Shutdown.xml" />
+   <vi filename="Write_and_Read_Multiple_Registers.xml" />
+   <vi filename="Write_Device_Identification.xml" />
+   <vi filename="Write_Exception_Status.xml" />
+   <vi filename="Write_Multiple_Coils.xml" />
+   <vi filename="Write_Multiple_Discrete_Inputs.xml" />
+   <vi filename="Write_Multiple_Input_Registers.xml" />
+   <vi filename="Write_Multiple_Registers.xml" />
+   <vi filename="Write_Single_Coil.xml" />
+   <vi filename="Write_Single_Holding_Register.xml" />
+</allvis>

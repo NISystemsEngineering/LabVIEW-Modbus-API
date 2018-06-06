@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by DANA JORAN (NATIONAL INSTRUMENTS) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="keyword.xsd"/>
+	<xs:include schemaLocation="options.xsd"/>
+	<xs:element name="shortDescription">
+		<xs:annotation>
+			<xs:documentation>Information that will appear in the context help of LabVIEW.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:group ref="shortDescBlocks" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="longDescription">
+		<xs:annotation>
+			<xs:documentation>Information that will apear after the short description in the Help topic for this VI, function, poly VI, or constant.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:group ref="longDescBlocks" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="append" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Information about which version of LabVIEW the object is avaialble.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="operatingSystem">
+		<xs:annotation>
+			<xs:documentation>Information about which version of LabVIEW the object is avaialble.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="All"/>
+				<xs:enumeration value="Windows Only"/>
+				<xs:enumeration value="Mac OS Only"/>
+				<xs:enumeration value="Linux Only"/>
+				<xs:enumeration value="Mac OS and Linux Only"/>
+				<xs:enumeration value="Windows and Mac OS Only"/>
+				<xs:enumeration value="Windows and Linux Only"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="details">
+		<xs:annotation>
+			<xs:documentation>Information that will appear at the end of the non scrolling region of the VI.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:group ref="descriptionGroup" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="listItem">
+		<xs:annotation>
+			<xs:documentation>Any item in a list.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:group ref="listItemGroup" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="para" type="genericPara"/>
+	<xs:complexType name="genericPara" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="format"/>
+			<xs:element name="dBOption" type="xs:string"/>
+			<xs:group ref="inlineLinksAndRefs"/>
+			<xs:element ref="keyword"/>
+			<xs:element ref="platform"/>
+			<xs:element ref="a"/>
+			<xs:element ref="img"/>
+			<!-- xs:element name="br"/ -->
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="longDescPara">
+		<xs:complexContent>
+			<xs:extension base="genericPara">
+				<xs:attribute name="append">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="true"/>
+							<xs:enumeration value="false"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="table">
+		<xs:annotation>
+			<xs:documentation>A table. Use [table class="class type"][tr][td]info[/td]...[/tr][/table] You do not need to enter a col_num. It is filled in automatically. Enter a caption ONLY if you would like a caption for the table to appear in a printed document.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="tr" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="th" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:group ref="paraGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute name="class" type="xs:string" use="optional" default="bordered"/>
+									<xs:attribute name="colSpan" type="xs:string" use="optional"/>
+									<xs:attribute name="rowSpan" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="td" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:group ref="omniGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute name="class" type="xs:string" use="optional" default="bordered"/>
+									<xs:attribute name="colSpan" type="xs:string" use="optional"/>
+									<xs:attribute name="rowSpan" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="type" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="class" type="xs:string" use="optional"/>
+			<xs:attribute name="type" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="visionImageInfo">
+		<xs:annotation>
+			<xs:documentation>VISION USE ONLY: icons for the data types to which the VI works on.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VisionU8" minOccurs="0"/>
+				<xs:element name="VisionU16" minOccurs="0"/>
+				<xs:element name="VisionI16" minOccurs="0"/>
+				<xs:element name="VisionSGL" minOccurs="0"/>
+				<xs:element name="VisionCSG" minOccurs="0"/>
+				<xs:element name="VisionRGBU32" minOccurs="0"/>
+				<xs:element name="VisionHSLU32" minOccurs="0"/>
+				<xs:element name="VisionRGBU64" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="oList">
+		<xs:annotation>
+			<xs:documentation>An ordered list.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="listItem" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="uList">
+		<xs:annotation>
+			<xs:documentation>An unordered list.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="listItem" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="img">
+		<xs:annotation>
+			<xs:documentation>Image. You must fill out the src attribute with the name of the graphic file. Use the print_only and print_help attributes to specify whether the image appears in a printed manual. Use the embed attribute if the image appears embedded in a para, li, note, etc. You do not have to include it if it is not embedded. Use the equation attribute (equation="Yes") if the img refers to an equation. Enter a caption (caption="caption for the image") only if the graphic will appear in a printed or PDF document and requires a caption. Use: [img embed="Yes/No" src="graphic_name.gif"/]. In almost all cases you should refer to a .gif file.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="src" type="xs:string" use="required"/>
+			<xs:attribute name="dpi" type="xs:string" use="optional"/>
+			<xs:attribute name="caption" type="xs:string" use="optional"/>
+			<xs:attribute name="print_only" type="xs:string" use="optional"/>
+			<xs:attribute name="print_help" type="xs:string" use="optional"/>
+			<xs:attribute name="embed" type="xs:string" use="optional"/>
+			<xs:attribute name="equation" type="xs:string" use="optional"/>
+			<xs:attribute name="id" type="xs:string" use="optional"/>
+			<xs:attribute name="source" type="xs:string" use="optional" default="eps"/>
+			<xs:attribute name="border" type="xs:string" use="optional" default="Yes"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Commenting out because we don't support express VIs. -->
+	<!--
+	<xs:element name="expressVI" type="objectType">
+		<xs:annotation>
+			<xs:documentation>Express VI. Use: [expressVI id="DB ID"]express VI[/expressVI]</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	-->
+	<xs:element name="refParameter">
+		<xs:annotation>
+			<xs:documentation>Reference to a parameter.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+			<!-- We don't use href anywhere-->
+			<!--
+			<xs:attribute name="href" type="xs:string" use="optional"/>
+			-->
+		</xs:complexType>
+	</xs:element>
+	<!-- Commenting out. We don't support functions yet. -->
+	<!--
+	<xs:element name="refFunction" type="objectType">
+		<xs:annotation>
+			<xs:documentation>Reference to a function. Use: &lt;refFunction fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	-->
+	<xs:element name="refPolyVI" type="objectReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a polymorpohic VI. Use: &lt;refPolyVI fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="refVI" type="objectReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a VI. Use: &lt;refVI fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="refObject" type="objectReference">
+		<xs:annotation>
+			<xs:documentation>Reference to any object. Use: &lt;refObject fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="refConstant" type="objectReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a constant. Use: &lt;refConstant fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="refPalette" type="objectReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a palette. Use: &lt;refPalette fileName="fileName.xml" /&gt;</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Commenting out because we don't support dialog boxes yet. -->
+	<!--
+	<xs:element name="dialogBoxRef" type="objectType">
+		<xs:annotation>
+			<xs:documentation>Reference to a dialog box. Use: [dialogBoxRef id="DB ID"]function[/dialogBoxRef]</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	-->
+	<xs:element name="examples">
+		<xs:annotation>
+			<xs:documentation>Enter information about any examples that make use of this VI.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="para" maxOccurs="unbounded"/>
+				<xs:element name="example">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="path">
+								<xs:annotation>
+									<xs:documentation>Indicates where the example is located. It can to a VI or to an llb.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="openExample" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element ref="browseExample" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="openExample">
+		<xs:annotation>
+			<xs:documentation>Opens a reference to an example. Add the path to the example VI you want to link to in the object attribute. Place it within a para tag. [open_example path="examples/general/structs.llb/Find/Maximum Value from Array.vi]</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="path" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="browseExample">
+		<xs:annotation>
+			<xs:documentation>Opens the NI Example finder to the correct setting. Add the id for the example entry you want to link to. Place it within a para tag OR after an open_example tag. [browse_example id="3812"]</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="buttons">
+		<xs:annotation>
+			<xs:documentation>A place or find button. Add the id for the object you want to link to in the object attribute. Place it within the li tag if it is part of a step or within a para tag if it is part of a concept. Use: [buttons object="DB ID"/]</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="object" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Commenting out because we don't support parent/child in XSL. -->
+	<!--
+	<xs:element name="parent">
+		<xs:annotation>
+			<xs:documentation>Text you want to reuse. Use: [parent id="string_unique_to_this_XML_file" info="chm_file::/file_name.html"]sentences, paragraph(s), image(s), etc.[/parent].</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="paraType">
+					<xs:attribute name="id" type="xs:string" use="required"/>
+					<xs:attribute name="info" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="child">
+		<xs:annotation>
+			<xs:documentation>Pulls text from a parent. DO NOT add text between child tags. Just refer to the parent id tag.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="ref" type="xs:string" use="required"/>
+			<xs:attribute name="info" type="xs:string" use="required"/>
+			<xs:attribute name="document" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	-->
+	<xs:element name="format">
+		<xs:annotation>
+			<xs:documentation>Lets you format text in a paragraph. USE ONLY when an object tag, such as a dialog_box tag, or other tag is not available. Choose from bold, italic, bold-italic, monospace, monospace-italic, monospace-bold, monospace-bold-italic, subscript, subscript-italic, superscript, or superscript-italic.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:NMTOKEN">
+								<xs:enumeration value="bold"/>
+								<xs:enumeration value="bold-italic"/>
+								<xs:enumeration value="italic"/>
+								<xs:enumeration value="monospace"/>
+								<xs:enumeration value="monospace-italic"/>
+								<xs:enumeration value="monospace-bold"/>
+								<xs:enumeration value="monospace-bold-italic"/>
+								<xs:enumeration value="superscript"/>
+								<xs:enumeration value="subscript"/>
+								<xs:enumeration value="subscript-italic"/>
+								<xs:enumeration value="superscript-italic"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="platform" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Platform tag. Wrap around operating system name.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="a">
+		<xs:annotation>
+			<xs:documentation>Lets you link to another topic. Use mainly to refer to other HTML topics. Please use object type tags for objects found in the database.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="name" type="xs:string" use="optional"/>
+					<xs:attribute name="href" type="xs:string" use="optional"/>
+					<xs:attribute name="target" type="xs:string" use="optional"/>
+					<xs:attribute name="format" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="connectorPane">
+		<xs:complexType>
+			<xs:attribute name="src" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="h2" type="headingType">
+		<xs:annotation>
+			<xs:documentation>Subheading for a topic. Use [h2]Heading title[/h2]. Enter an id attribute ONLY if one was not autogenerated for you. This would occur if you enter a heading directly into the concept XML file and do enter documentation into a new feature documentation form and generated the XML documentation from the form.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="h3" type="headingType">
+		<xs:annotation>
+			<xs:documentation>Third-level heading for a topic. Use [h3]Heading title[/h3]. Enter an id attribute ONLY if one was not autogenerated for you. This would occur if you enter a heading directly into the concept XML file and do enter documentation into a new feature documentation form and generated the XML documentation from the form.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="h4" type="headingType">
+		<xs:annotation>
+			<xs:documentation>Fourth-level heading for a topic. Use [h4]Heading title[/h4]. Enter an id attribute ONLY if one was not autogenerated for you. This would occur if you enter a heading directly into the concept XML file and do enter documentation into a new feature documentation form and generated the XML documentation from the form.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="h5" type="headingType">
+		<xs:annotation>
+			<xs:documentation>Fifth-level heading for a topic. Use [h5]Heading title[/h5]. Enter an id attribute ONLY if one was not autogenerated for you. This would occur if you enter a heading directly into the concept XML file and do enter documentation into a new feature documentation form and generated the XML documentation from the form.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+		<xs:attribute name="altConnectorPane" type="xs:string" >
+		<xs:annotation>
+			<xs:documentation>Optional attribute to support alternative filenames for connector pane images</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>	
+	<xs:element name="caution" type="paraType"/>
+	<xs:element name="note" type="paraType"/>
+	<xs:element name="tip" type="paraType"/>
+	<xs:complexType name="descriptionType" mixed="true">
+		<xs:annotation>
+			<xs:documentation>This is basically any type of tag that can hold paragraphs or inline tags.</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:group name="shortDescBlocks">
+		<xs:choice>
+			<xs:element name="para" type="genericPara" maxOccurs="unbounded"/>
+			<xs:element ref="note" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="tip" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="caution" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="longDescBlocks">
+		<xs:choice>
+			<xs:element name="para" type="longDescPara" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="lists"/>
+			<xs:element ref="img" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="caution" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="note" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="tip" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="headings"/>
+			<xs:element ref="table" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="descriptionGroup">
+		<xs:choice>
+			<xs:group ref="lists"/>
+			<xs:element ref="img" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="caution" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="note" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="tip" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="headings"/>
+			<xs:element ref="table" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="para" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="lists">
+		<xs:choice>
+			<xs:element ref="oList" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="uList" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="headings">
+		<xs:choice>
+			<xs:element ref="h2" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="h3" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="h4" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="listItemGroup">
+		<xs:choice>
+			<xs:group ref="descriptionGroup"/>
+			<xs:group ref="paraGroup"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="paraGroup">
+		<xs:choice>
+			<xs:element name="dBOption" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="format" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="inlineLinksAndRefs"/>
+			<xs:element ref="a" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="platform" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="inlineAll">
+		<xs:annotation>
+			<xs:documentation>All inline elements.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element ref="format"/>
+			<xs:element name="dBOption" type="xs:string"/>
+			<xs:element ref="keyword"/>
+			<xs:element ref="platform"/>
+			<xs:element ref="a"/>
+			<xs:element ref="img"/>
+			<!-- xs:element name="br"/ -->
+			<xs:group ref="inlineLinksAndRefs"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="inlineLinksAndRefs">
+		<xs:annotation>
+			<xs:documentation>Inline tags to reference parameters, VIs, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element ref="refVI"/>
+			<xs:element ref="refConstant"/>
+			<xs:element ref="refPalette"/>
+			<!-- xs:element ref="refFunction"/ -->
+			<xs:element ref="refObject"/>
+			<xs:element ref="refParameter"/>
+			<xs:element ref="refPolyVI"/>
+			<xs:element name="thisParameter" type="emptyTag"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="omniGroup">
+		<xs:sequence>
+			<xs:element ref="para" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="oList" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="uList" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="img" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="caution" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="note" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="tip" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="h2" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="h3" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="h4" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="table" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="dBOption" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="format" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:group ref="inlineLinksAndRefs" minOccurs="0" maxOccurs="unbounded"/>
+			<!--
+			<xs:element name="br" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> A line break. Use: [br/]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			-->
+			<xs:element ref="a" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="enumVals" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element name="enumVal" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="value" type="xs:string"/>
+									<xs:element name="description" type="paraType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="platform" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="headingType">
+		<xs:annotation>
+			<xs:documentation>The type for headings</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="paraType" mixed="true">
+		<xs:annotation>
+			<xs:documentation>This is basically any type of tag that can hold paragraphs or inline tags.</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:group ref="inlineLinksAndRefs"/>
+			<xs:element name="dBOption" type="xs:string"/>
+			<xs:element ref="format"/>
+			<xs:element ref="oList"/>
+			<xs:element ref="para"/>
+			<xs:element ref="uList"/>
+			<xs:element ref="img"/>
+			<xs:element ref="a"/>
+			<xs:element ref="platform"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="objectReference">
+		<xs:attribute name="chm" type="xs:string" use="optional"/>
+		<xs:attribute name="fileName" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="objectType">
+		<xs:annotation>
+			<xs:documentation>This is basically for any object that might appear as a function reference topic. Use must fill out the id attribute with this </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id" type="xs:string" use="optional"/>
+				<xs:attribute name="fileName" type="xs:string" use="optional"/>
+				<xs:attribute name="chm" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="perFileOptionsType">
+		<xs:sequence>
+			<xs:element ref="addJavaScript" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="showPlaceFind" minOccurs="0"/>
+			<xs:element ref="hidePlaceFind" minOccurs="0"/>
+			<xs:element ref="hideConnPane" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

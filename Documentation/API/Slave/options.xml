@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- Please refer to the VI XML Help file for more information about these options. -->
+    
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="options.xsd">
+   
+     <!-- Define Installed With:' options-->
+	 <products>
+     <product id="LV" default="yes">LabVIEW</product>
+     </products>
+     
+    <!-- Disable 'Installed With:' -->
+    <!-- <disableInstalledWith/> -->
+
+    <!-- Adding JavaScript to All HTML Files -->
+    <!--  <addJavaScript path="FileName.js"/>  -->
+
+	<!-- Enable feedback link -->
+    <!-- <showFeedbackLink/> -->
+   
+    <!-- Adding a JavaScript Variable to All HTML Files-->
+    <!-- <JSVar name="FileNameCHM" type="string">FileName.chm</JSVar> -->
+    
+    <!-- Enabling Place/Find Buttons in All HTML Files -->
+    <!-- <showPlaceFind/>  -->
+    
+    <!-- Placing Image Files in Subdirectories -->
+    <!-- <datatypesSubDir path="datatype_images"/>   -->
+   
+    <!--<convertLigatures/>-->
+</options>

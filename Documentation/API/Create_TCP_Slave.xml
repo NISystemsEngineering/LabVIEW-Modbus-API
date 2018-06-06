@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Create TCP Slave.vi" VILibrary="API Main.lvlib">
+<name>Create TCP Slave.vi</name><shortDescription><para>Creates a standard TCP slave with an IP ADU. If the data model input is unwired, a standard data model will be initialized and used. If the input is wired, the code will check to make sure that it is not the default value for the class (it should be initialized). If the default value of the class is wired, the standard model will be initialized and used.</para></shortDescription><parameters>
+<refParameter id="device_data_model_1162"/><refParameter id="error_out_1180"/><refParameter id="error_in_1134"/><refParameter id="port_(502)_1192"/><refParameter id="TCP_slave_instance_1218"/></parameters>
+</vi>

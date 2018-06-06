@@ -1,0 +1,8 @@
+<vi>
+<name>Shutdown.vi</name>
+<desc><para>Performs any actions needed to shutdown and clean up the Modbus instance provided. For a slave instance, this will force a shutdown of the slave daemon and close all connections to the physical bus.</para>
+</desc>
+<helptopic>Shutdown.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

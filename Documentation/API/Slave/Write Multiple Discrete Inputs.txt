@@ -1,0 +1,8 @@
+<vi>
+<name>Write Multiple Discrete Inputs.vi</name>
+<desc><para>Writes <strong>discrete inputs to write</strong> starting at <strong>starting address</strong> to the device inputs. This function is usable by the Modbus slave only.</para>
+</desc>
+<helptopic>Write_Multiple_Discrete_Inputs.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

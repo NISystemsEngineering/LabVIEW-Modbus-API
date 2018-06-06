@@ -1,0 +1,8 @@
+<vi>
+<name>Write Multiple Input Registers.vi</name>
+<desc><para>Writes <strong>input registers to write</strong> starting at <strong>starting address</strong> to the device registers. This function is usable by the Modbus slave only.</para>
+</desc>
+<helptopic>Write_Multiple_Input_Registers.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

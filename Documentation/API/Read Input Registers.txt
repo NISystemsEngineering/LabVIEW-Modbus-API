@@ -1,0 +1,8 @@
+<vi>
+<name>Read Input Registers.vi</name>
+<desc><para>Reads <strong>number of inputs</strong> input registers starting at <strong>starting address</strong> from the device.</para>
+</desc>
+<helptopic>Read_Input_Registers.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

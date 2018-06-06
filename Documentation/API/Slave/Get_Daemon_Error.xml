@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Get Daemon Error.vi" VILibrary="Modbus Slave.lvclass">
+<name>Get Daemon Error.vi</name><shortDescription><para>This VI is an accessor for the <format type="bold">daemon error</format> stored in the Modbus slave instance. This accessor can be used as a property node. This status indicates the error state of the Modbus daemon.</para></shortDescription><parameters>
+<refParameter id="error_out_120"/><refParameter id="error_in_(no_error)_24"/><refParameter id="Modbus_Slave_out_34"/><refParameter id="daemon_error_66"/><refParameter id="Modbus_slave_in_130"/></parameters>
+</vi>

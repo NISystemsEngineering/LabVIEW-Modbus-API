@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Set Read Timeout.vi" VILibrary="Modbus Master.lvclass">
+<name>Set Read Timeout.vi</name><shortDescription><para>Provides a simple function for defining the timeout of read and write operations on the bus. This function takes effect immediately, and will change the timeouts of any future operations using the instance returned by <format type="bold">Modbus master out</format>. Multiple timeout settings can be used simultaneously by forking the wire.</para></shortDescription><parameters>
+<refParameter id="Modbus_master_in_117"/><refParameter id="read_operation_timeout_203"/><refParameter id="error_out_102"/><refParameter id="error_in_115"/><refParameter id="Modbus_master_out_104"/></parameters>
+</vi>

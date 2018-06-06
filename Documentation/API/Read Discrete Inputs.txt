@@ -1,0 +1,8 @@
+<vi>
+<name>Read Discrete Inputs.vi</name>
+<desc><para>Reads <strong>number of inputs</strong> discrete inputs starting at <strong>starting address</strong> from the device.</para>
+</desc>
+<helptopic>Read_Discrete_Inputs.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

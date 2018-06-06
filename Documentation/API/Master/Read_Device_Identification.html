@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="minimal.css"><script type="text/javascript">var nofeedbacklink = true;</script><script src="common.js" type="text/javascript"></script><script src="cssframes.js" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>Read Device Identification VI</title>
+<link media="print" rel="stylesheet" type="text/css" href="print.css">
+</head>
+<body>
+<noscript>
+<p class="Body">JavaScript is disabled. <a href="lvhelp.chm::/JavaScript_Disabled.html">Details</a></p>
+<hr width="100%">
+</noscript>
+<div id="styleDivTitle">
+<h1>Read Device Identification VI</h1><strong>Installed With:</strong> LabVIEW<p>Reads Modbus object information stored on the device. This can include basic information, like manufacturer, additional standard items, or model-specific extended items. This function may take a large amount of time to execute, as it requires the transfer of a large quantity of binary data. Even on TCP/IP, this function is limited by the maximum defined size of a Modbus protocol data unit.</p>
+<p class="Anchor"><img src="Read_Device_Identification.gif" alt="Read Device Identification"></p>
+</div>
+<div id="styleDivScrolling">
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cu8.gif" alt="datatype_images\cu8.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>object ID</strong> defines the specific ID to read. This input is only used if <strong>read device ID code</strong> is set to Read Specific</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cenum.gif" alt="datatype_images\cenum.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>read device ID code</strong> defines the type of read to be performed. If Read Basic is selected, this function will return the VendorName, ProductCode, and MajorMinorRevision. If Read Regular is selected, the previous objects will be returned along with, optionally, VendorUrl, ProductName, ModelName, or UserApplicationName. If Read Extended is selected, additional private objects may be returned, as defined by the manufaturer. Finally, Read Specific causes this function to only return the object defined by <strong>object ID</strong>. If a read type is selected which is higher than the capability of the device, it will return all objects possible. The only objects which are mandatory, if this function is supported by the device, are VendorName (0x00), ProductCode (0x01), and MajorMinorRevision (0x02). All other objects are optional.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\icclst.gif" alt="datatype_images\icclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error out</strong> contains error information. This output provides standard error out functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\ibool.gif" alt="datatype_images\ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ii32.gif" alt="datatype_images\ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\istr.gif" alt="datatype_images\istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ccclst.gif" alt="datatype_images\ccclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error in</strong> describes error conditions that occur before this node runs. This input provides standard error in functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cbool.gif" alt="datatype_images\cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ci32.gif" alt="datatype_images\ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cstr.gif" alt="datatype_images\cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\irn.gif" alt="datatype_images\irn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus master out</strong> returns the Modbus master instance provided as input.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\i1dcclst.gif" alt="datatype_images\i1dcclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>objects</strong> returns all Modbus data objects requested.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\iu8.gif" alt="datatype_images\iu8.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Object ID</strong></p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\istr.gif" alt="datatype_images\istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Value</strong></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\crn.gif" alt="datatype_images\crn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus master in</strong> can accept any Modbus master instance.</p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

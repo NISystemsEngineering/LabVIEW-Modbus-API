@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Create TCP Master.vi" VILibrary="API Main.lvlib">
+<name>Create TCP Master.vi</name><shortDescription><para>Creates a standard TCP master using an IP transmission data unit. This instance looks for a slave at the <format type="bold">address</format> and <format type="bold">port</format> specified.</para></shortDescription><parameters>
+<refParameter id="address_1190"/><refParameter id="port_(502)_1192"/><refParameter id="error_out_1152"/><refParameter id="error_in_1134"/><refParameter id="TCP_master_instance_1200"/></parameters>
+</vi>

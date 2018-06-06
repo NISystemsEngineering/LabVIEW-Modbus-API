@@ -1,0 +1,8 @@
+<vi>
+<name>Get Daemon Connection Count.vi</name>
+<desc><para>This VI is an accessor for the <strong>connection count</strong> for all connections currently established to the Modbus slave instance. This accessor can be used as a property node. </para>
+</desc>
+<helptopic>Get_Daemon_Connection_Count.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

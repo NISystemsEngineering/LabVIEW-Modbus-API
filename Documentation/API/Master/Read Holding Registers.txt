@@ -1,0 +1,8 @@
+<vi>
+<name>Read Holding Registers.vi</name>
+<desc><para>Reads <strong>number of inputs</strong> holding registers starting at <strong>starting address</strong> from the device.</para>
+</desc>
+<helptopic>Read_Holding_Registers.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

@@ -1,0 +1,8 @@
+<vi>
+<name>Write Multiple Coils.vi</name>
+<desc><para>Writes <strong>coils to write</strong> starting at <strong>starting address</strong> to the device coils.</para>
+</desc>
+<helptopic>Write_Multiple_Coils.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>

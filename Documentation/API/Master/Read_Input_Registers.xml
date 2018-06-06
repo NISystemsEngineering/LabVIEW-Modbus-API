@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?><?xml-stylesheet type="text/xsl" href="VI_to_HTML.xsl"?><vi VIXMLVersion="2.1.0" xml:space="preserve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="VI.xsd" name="Read Input Registers.vi" VILibrary="Modbus Master.lvclass">
+<name>Read Input Registers.vi</name><shortDescription><para>Reads <format type="bold">number of inputs</format> input registers starting at <format type="bold">starting address</format> from the device.</para></shortDescription><parameters>
+<refParameter id="Modbus_master_in_117"/><refParameter id="starting_address_119"/><refParameter id="number_of_inputs_121"/><refParameter id="error_out_102"/><refParameter id="error_in_115"/><refParameter id="Modbus_master_out_104"/><refParameter id="register_values_171"/></parameters>
+</vi>

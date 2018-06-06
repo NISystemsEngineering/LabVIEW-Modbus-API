@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="minimal.css"><script type="text/javascript">var nofeedbacklink = true;</script><script src="common.js" type="text/javascript"></script><script src="cssframes.js" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>Set Unit ID VI</title>
+<link media="print" rel="stylesheet" type="text/css" href="print.css">
+</head>
+<body>
+<noscript>
+<p class="Body">JavaScript is disabled. <a href="lvhelp.chm::/JavaScript_Disabled.html">Details</a></p>
+<hr width="100%">
+</noscript>
+<div id="styleDivTitle">
+<h1>Set Unit ID VI</h1><strong>Installed With:</strong> LabVIEW<p>Provides a simple function for defining the <strong>unit ID</strong> which is the target of Modbus master read and write operations. This function takes effect immediately, and will change the target of any future operations using the instance returned by <strong>Modbus master out</strong>. Multiple units can be accessed simultaneously by forking the wire. This function only applies when using the RTU or ASCII serial transmission data unit. The TCP/IP transmission data unit ignores the unit ID.</p>
+<p class="Anchor"><img src="Set_Unit_ID.gif" alt="Set Unit ID"></p>
+</div>
+<div id="styleDivScrolling">
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\crn.gif" alt="datatype_images\crn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus master in</strong> can accept any Modbus master instance.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cu8.gif" alt="datatype_images\cu8.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>unit ID</strong> defines the device targeted by all Modbus master read and write operations. This value is only used with a serial transmission data unit.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\icclst.gif" alt="datatype_images\icclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error out</strong> contains error information. This output provides standard error out functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\ibool.gif" alt="datatype_images\ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ii32.gif" alt="datatype_images\ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\istr.gif" alt="datatype_images\istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ccclst.gif" alt="datatype_images\ccclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>error in</strong> describes error conditions that occur before this node runs. This input provides standard error in functionality.</p>
+<table class="Borderless">
+<tr>
+<td><img src="datatype_images\cbool.gif" alt="datatype_images\cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>status</strong> boolean is either TRUE (X) for an error, or FALSE (checkmark) for no error or a warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\ci32.gif" alt="datatype_images\ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>code</strong> input identifies the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\cstr.gif" alt="datatype_images\cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> The <strong>source</strong> string describes the origin of the error or warning.
+
+The pop-up option <strong>Explain Error</strong> (or Explain Warning) gives more information about the error displayed.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="datatype_images\irn.gif" alt="datatype_images\irn.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"> <strong>Modbus master out</strong> returns the Modbus master instance provided as input.</p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

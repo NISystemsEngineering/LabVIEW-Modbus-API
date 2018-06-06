@@ -1,0 +1,8 @@
+<vi>
+<name>Initialize.vi</name>
+<desc><para>Initializes a Modbus slave instance. If using the <strong>Create Modbus Instance</strong> VI, this is not necessary. This function will initiate any required bus communication and launch a daemon to handle incoming requests from the master.</para>
+</desc>
+<helptopic>Initialize.html</helptopic>
+<controls></controls>
+<indicators></indicators>
+</vi>
