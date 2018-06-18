@@ -69,6 +69,20 @@
 			</Item>
 		</Item>
 	</Item>
+	<Item Name="isMaster" Type="Property Definition">
+		<Property Name="NI.ClassItem.Property.LongName" Type="Str">isMaster</Property>
+		<Property Name="NI.ClassItem.Property.ShortName" Type="Str">isMaster</Property>
+		<Property Name="NI.ClassItem.Property.SortKey" Type="Int">-1</Property>
+		<Item Name="isMaster.vi" Type="VI" URL="../isMaster.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%A#!"!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%P!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!Z!)1BJ=UVB=X2F=A!!-E"Q!"Y!!"=64G6U&gt;W^S;S"4&lt;'&amp;W:3ZM&gt;G.M98.T!"&amp;/:82X&lt;X*L)&amp;.M98:F)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$*!=!!?!!!8&amp;5ZF&gt;(&gt;P=GMA5WRB&gt;G5O&lt;(:D&lt;'&amp;T=Q!14G6U&gt;W^S;S"4&lt;'&amp;W:3"J&lt;A!!6!$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!%!!A#!!"Y!!!.#!!!!!!!!!E!!!#.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!*!!!!!!!1!*!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821056</Property>
+		</Item>
+	</Item>
 	<Item Name="daemon status cluster.ctl" Type="VI" URL="../daemon status cluster.ctl">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%A#!"!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!-!!!!!1!%!!!!!1!!!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
