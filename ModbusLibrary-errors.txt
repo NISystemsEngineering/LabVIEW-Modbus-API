@@ -64,4 +64,7 @@ Modbus Exception: Gateway Path Unavailable. The gateway may be misconfigured or 
 <nierror code="538192">
 Modbus Exception: Gateway Target Device Failed to Respond. This usually means that the target device is not present on the network.
 </nierror>
+<nierror code="538193">
+Modbus Exception: Response Transaction ID doesn't match Request. This usually occurs on network error.
+</nierror>
 </nidocument>
