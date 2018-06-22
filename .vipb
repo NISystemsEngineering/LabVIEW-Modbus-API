@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2017" Created_Date="2013-01-23 11:13:18" Modified_Date="2018-06-18 11:17:04" Creator="Daniel Smith" Comments="" ID="0e912e42a0412ebfc22e066ecb69e594">
+<VI_Package_Builder_Settings Version="2017" Created_Date="2013-01-23 11:13:18" Modified_Date="2018-06-22 09:37:36" Creator="Daniel Smith" Comments="" ID="dbaba489612e3149f8e6d631f1c952a8">
   <Library_General_Settings>
     <Package_File_Name>ni_lib_modbus_library</Package_File_Name>
-    <Library_Version>1.2.0.42</Library_Version>
+    <Library_Version>1.2.1.43</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>.</Library_Source_Folder>
     <Library_Output_Folder>builds</Library_Output_Folder>
@@ -34,7 +34,7 @@ This library allows for low-level access to that core function set and provides 
       <Copyright/>
       <Packager>NI Systems Engineering</Packager>
       <URL/>
-      <Release_Notes>Added error on transaction ID mismatch</Release_Notes>
+      <Release_Notes>Updated transaction ID shift register datatype to be U16</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
