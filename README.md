@@ -9,6 +9,9 @@ A newer library, intended as a replacement for this one, was added to ni.com/lab
 4) Make changes, periodically pulling and merging any updates from the central repository.
 5) Push your changes up to your branch in your copy of the repository.
 6) Send a pull request to the owner of this primary repository. Follow the contribution guidelines.
+
+
+
 ###Contribution Guidelines:
 
 1) Limit the scope of your change as much as possible. Smaller changes are easier to process. Any major changes should be discussed beforehand with the managers of the repository to ensure that it fits within the goals and vision of the project.
