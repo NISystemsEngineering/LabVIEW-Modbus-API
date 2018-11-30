@@ -70,6 +70,8 @@
 			<Item Name="API Main.lvlib" Type="Library" URL="../API/Wrapper/API Main.lvlib"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
+			<Item Name="Modbus Serial Slave Example.vi" Type="VI" URL="../Examples/Modbus Serial Slave Example.vi"/>
+			<Item Name="Modbus Serial Master Example.vi" Type="VI" URL="../Examples/Modbus Serial Master Example.vi"/>
 			<Item Name="Modbus Master Example.vi" Type="VI" URL="../Examples/Modbus Master Example.vi"/>
 			<Item Name="Modbus Slave Example.vi" Type="VI" URL="../Examples/Modbus Slave Example.vi"/>
 		</Item>

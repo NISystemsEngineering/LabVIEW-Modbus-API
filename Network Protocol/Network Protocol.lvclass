@@ -45,4 +45,13 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">8388624</Property>
 	</Item>
+	<Item Name="Protocol Read to CRLF.vi" Type="VI" URL="../Protocol Read to CRLF.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;Q!!!!$A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%%!B#H2J&lt;76E)'^V&gt;$]!!!V!"1!(4H6N:8*J9Q!31%!!!@````]!"12E982B!!!Y1(!!(A!!'BB/:82X&lt;X*L)&amp;"S&lt;X2P9W^M,GRW9WRB=X-!!"*Q=G^U&lt;W.P&lt;#"M98FF=C"P&gt;81!!!1!!!!71&amp;!!!Q!!!!%!!ABF=H*P=C"J&lt;A!!$5!$!!&gt;U;7VF&lt;X6U!".!!Q!.9HFU:8-A&gt;']A=G6B:!!W1(!!(A!!'BB/:82X&lt;X*L)&amp;"S&lt;X2P9W^M,GRW9WRB=X-!!"&amp;Q=G^U&lt;W.P&lt;#"M98FF=C"J&lt;A"5!0!!$!!$!!1!"A!(!!A!#!!)!!A!#1!+!!M!$!-!!(A!!!U)!!!*!!!!#1!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!A!!!!1!!!!E!!!!!!"!!U!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">1224736896</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">798736</Property>
+	</Item>
 </LVClass>
