@@ -3,7 +3,7 @@ The MODBUS library is a free, downloadable set of Virtual Instruments (VIs) that
 A newer library, intended as a replacement for this one, was added to ni.com/labs. This is not an official NI Product. 
 
 ###Contribution Workflow: For a more complete workflow, view this set-up guide and this workflow guide.
-1) Create and issue or assing the existing issue to you
+1) Create an issue or assign the existing issue to you.
 2) Fork this repository into your account.
 3) Create a branch for your change.
 4) Make changes, periodically pulling and merging any updates from the central repository.
