@@ -2,7 +2,7 @@
 The MODBUS library is a free, downloadable set of Virtual Instruments (VIs) that provide Modbus communication from any standard Ethernet or serial port. The LabVIEW library implements the Modbus protocol in software and offers both master and slave functionality. Using the Modbus library, Programmable Automation Controllers (PACs) can communicate with gateway devices that provide connectivity to a wide variety of industrial networks, such as PROFIBUS, EthernetIP, and DeviceNet.
 A newer library, intended as a replacement for this one, was added to ni.com/labs. This is not an official NI Product. 
 
-###Contribution Workflow: For a more complete workflow, view this set-up guide and this workflow guide.
+### Contribution Workflow: For a more complete workflow, view this set-up guide and this workflow guide.
 1) Create an issue or assign the existing issue to you.
 2) Fork this repository into your account.
 3) Create a branch for your change.
@@ -12,7 +12,7 @@ A newer library, intended as a replacement for this one, was added to ni.com/lab
 
 
 
-###Contribution Guidelines:
+### Contribution Guidelines:
 
 1) Limit the scope of your change as much as possible. Smaller changes are easier to process. Any major changes should be discussed beforehand with the managers of the repository to ensure that it fits within the goals and vision of the project.
 2) Explain the reason for your change with as much detail as possible. If it is a bugfix, link it to an issue in the issues tracker. If it is an enhancement, consider making an issue in the issue tracker to discuss the enhancement before making it. This ensures that the enhancement will provide value to other users.
